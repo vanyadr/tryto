@@ -1,25 +1,18 @@
 import React, { Component } from "react";
-import "./Header.css"
-import { ReactComponent as Logo } from './logo1.svg';
+import "./Header.module.css"
+import { Logotipe } from "./Logotipe"
+import { Menu } from "./Menu"
 
 
-export default function Header(){
+export function Header(){
     return (
         <div className="head">
-            <div className="links">
-                <div className="link" id="logo">
-                    <Logo id="logoPic" />
-                </div>
-                <div className="link">
-                    <a href="/">Home</a>
-                </div>
-                <div className="link">
-                    <a href="/about">About</a>
-                </div>
-                <div className="link">
-                    <a href="/contacts">Contacts</a>
-                </div>
+            <div className="link">
+                <Logotipe />
+            </div>
+            <div className="link">
+                <Menu />
             </div>
         </div>
-    )
+    );
 }
