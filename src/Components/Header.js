@@ -9,7 +9,7 @@ export default class Header extends Component {
             <div className="head">
                 <div className="links">
                     <div className="link" id="logo">
-                        <Logo />
+                        <Logo id="logoPic" />
                     </div>
                     <div className="link">
                         <a href="/">Home</a>
