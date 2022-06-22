@@ -6,10 +6,10 @@ export function Menu(){
     return (
         <div className={ styles.holder }>
             <div className={ styles.butt}>
-                <a href="/">Home</a>
+                <a href="/">Board</a>
             </div>
             <div className={ styles.butt }>
-                <a href="/about">About</a>
+                <a href="/about">Add Task</a>
             </div>
             <div className={ styles.butt }>
                 <a href="/contacts">Contacts</a>
