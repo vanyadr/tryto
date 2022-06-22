@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "./Logo.module.css"
+import styles from "./Logo.module.css"
 import { ReactComponent as Logo } from './logo1.svg';
 
 
-export function Logotipe(){
+export function Logotype(){
     return (
         <div>
-            <div id="logo">
-                <Logo id="logoPic" />
+            <div className={ styles.logo }>
+                <Logo className={ styles.logoPic } />
             </div>
         </div>
     );
