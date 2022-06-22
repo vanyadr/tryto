@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import "./Header.module.css"
-import { Logotipe } from "./Logotipe"
+import styles from "./Header.module.css"
+import { Logotype } from "./Logotype"
 import { Menu } from "./Menu"
 
 
 export function Header(){
     return (
-        <div className="head">
-            <div className="link">
-                <Logotipe />
+        <div className={ styles.head }>
+            <div className={ styles.link }>
+                <Logotype />
             </div>
-            <div className="link">
+            <div className={ styles.link }>
                 <Menu />
             </div>
         </div>
