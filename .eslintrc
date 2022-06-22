@@ -1,0 +1,117 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint", "import"],
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-array-index-key": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "no-var": "error",
+    "brace-style": "error",
+    "prefer-template": "error",
+    "radix": "error",
+    "space-before-blocks": "error",
+    "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom,react-dom/*}",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "{api,api/*,app,app/*,auth,components,components/*,const,hooks,i18n,mock,mock/*,shared,shared/*,shared/*/*,store,store/*,types,utils}",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "*.css",
+            "patternOptions": { "matchBase": true },
+            "group": "unknown",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "import/no-unresolved": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-unused-vars": "off",
+    "react/prop-types": "off",
+    "no-console": ["error", { "allow": ["error"] }],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx",
+        "**/*.test.tsx",
+        "**/*.spec.js",
+        "**/*.spec.jsx",
+        "**/*.spec.tsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
