@@ -7,24 +7,16 @@ import { TaskAdder } from "../../../pages"
 
 export function Menu(){
     return (
-        <>
-            <div className={ styles.holder }>
-                <div className={ styles.butt}>
-                    <a href="/">Board</a>
-                </div>
-                <div className={ styles.butt }>
-                    <a href="/add">Add Task</a>
-                </div>
-                <div className={ styles.butt }>
-                    <a href="/contacts">Contacts</a>
-                </div>
+        <div className={ styles.holder }>
+            <div className={ styles.butt}>
+                <a href="/">Board</a>
             </div>
-
-            <Router>
-                <Routes>
-                    <Route path="/add" element={ TaskAdder } />
-                </Routes>
-            </Router>
-        </>
+            <div className={ styles.butt }>
+                <a href="/add">Add Task</a>
+            </div>
+            <div className={ styles.butt }>
+                <a href="/contacts">Contacts</a>
+            </div>
+        </div>
     );
 }
