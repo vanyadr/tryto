@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Menu.module.css"
-import { TaskAdder } from "../../../pages"
 
 
 
@@ -9,13 +8,13 @@ export function Menu(){
     return (
         <div className={ styles.holder }>
             <div className={ styles.butt}>
-                <a href="/">Board</a>
+                <Link to="/">Board</Link>
             </div>
             <div className={ styles.butt }>
-                <a href="/add">Add Task</a>
+                <Link to="/add">Add Task</Link>
             </div>
             <div className={ styles.butt }>
-                <a href="/contacts">Contacts</a>
+                <Link to="/contacts">Contacts</Link>
             </div>
         </div>
     );
