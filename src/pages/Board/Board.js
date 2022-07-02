@@ -7,10 +7,6 @@ export function Board() {
     return (
         <div>
             <Header/>
-            Hello
-            Hello
-            Hello
-            <p>Hello</p>
             <Outlet/>
         </div>
     );

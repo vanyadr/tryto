@@ -8,10 +8,7 @@ export function TaskAdder() {
   return (
     <div>
         <TaskAdd/>
-        Hello
-        Hello
-        Hello
-        <p>Hello</p>
+
     </div> 
   );
 }

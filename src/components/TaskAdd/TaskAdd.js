@@ -11,7 +11,7 @@ export function TaskAdd(){
                 <TaskAddHeader />
             </div>
             <div className={styles.form}>
-
+                <TaskAddForm/>
             </div>
         </div>
     );
