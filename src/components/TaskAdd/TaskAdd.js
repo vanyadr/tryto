@@ -4,6 +4,12 @@ import { TaskAddHeader } from "./TaskAddHeader"
 import { TaskAddForm } from "./TaskAddForm"
 
 
+export let bigState = [];
+
+export function AddState(props) {
+    bigState.push(props.task)
+}
+
 export function TaskAdd(){
     return (
         <div className={styles.body}>

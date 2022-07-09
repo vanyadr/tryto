@@ -8,7 +8,7 @@ export function Menu(){
     return (
         <div className={ styles.holder }>
             <div className={ styles.butt}>
-                <Link to="/">Board</Link>
+                <Link to="/desk">Board</Link>
             </div>
             <div className={ styles.butt }>
                 <Link to="/add">Add Task</Link>
