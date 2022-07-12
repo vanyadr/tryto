@@ -10,6 +10,7 @@ export class TaskAddForm extends React.Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.sendState = this.sendState.bind(this)
     }
 
     handleChange(event) {
@@ -20,10 +21,12 @@ export class TaskAddForm extends React.Component {
         this.setState({
             [name]: value
         });
+        console.log(this.state)
     }
 
-    getState() {
-        return this.state
+    sendState() {
+        console.log(this.state);
+        AddState(this.state)
     }
 
     render() {
@@ -47,7 +50,7 @@ export class TaskAddForm extends React.Component {
                             onChange={this.handleChange} />
                     </label>
                 </form>
-                <AddState task={this.state} />
+                <button onClick={this.sendState}>Add</button>
             </div>
         );
     }

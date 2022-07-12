@@ -7,7 +7,7 @@ import { TaskAddForm } from "./TaskAddForm"
 export let bigState = [];
 
 export function AddState(props) {
-    bigState.push(props.task)
+    bigState.push(props)
 }
 
 export function TaskAdd(){
