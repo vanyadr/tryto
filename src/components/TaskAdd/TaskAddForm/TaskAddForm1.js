@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {AddState} from "../TaskAdd"
+import { useTasks } from "../../TaskContext"
 
 const [task, setTask] = useState({
     name: '',
@@ -17,10 +17,7 @@ const handleChange = (event) => {
     console.log(task)
 }
 
-const sendState = () => {
-    console.log(task);
-    AddState(task)
-}
+const value = useTasks()
 
 export const TaskAddForm = () => {
     return (
@@ -43,7 +40,7 @@ export const TaskAddForm = () => {
                         onChange={handleChange} />
                 </label>
             </form>
-            <button onClick={sendState}>Add</button>
+            <button onClick={value}>Add</button>
         </div>
     );
 }
