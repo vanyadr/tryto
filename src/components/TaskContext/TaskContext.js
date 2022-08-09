@@ -14,9 +14,9 @@ export const TasksContextProvider = ({ children }) => {
     //         deleteTask(taskId) {setTasks((prevState) => prevState.filter(({ id }) => id !== taskId));},
     //     }), [tasks],);
 
-    const addTask = (task) => {setTasks((prevState) => [...prevState, { ...task, id: prevState.length + 1 },])};
+    const value = { addTask(task) {setTasks((prevState) => [...prevState, { ...task, id: prevState.length + 1 },])} };
 
-    return (<TasksContext.Provider value={addTask}>{children}</TasksContext.Provider>);
+    return (<TasksContext.Provider value={value}>{children}</TasksContext.Provider>);
 };
 
 TasksContext.displayName = 'TasksContext';
