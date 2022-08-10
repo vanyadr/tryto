@@ -40,7 +40,7 @@ export const TaskAddForm = () => {
                         onChange={handleChange} />
                 </label>
             </form>
-            <button onClick={value.addTask(task)}>Add</button>
+            <button onClick={(task) => value.addTask(task)}>Add</button>
         </div>
     );
 }
